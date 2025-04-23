@@ -13,8 +13,11 @@ namespace Wk4Ex3
             Console.WriteLine("Insert a word to manipulate or test.");
             string userString = Console.ReadLine();
 
-            Console.WriteLine(ReverseString(userString));
+            Console.WriteLine(userString+" reversed is: "+ReverseString(userString));
             
+            Console.WriteLine("The amount of vowels in "+userString+" is: "+ CountVowels(userString));
+
+
         }
 
         public static string ReverseString(string userString)
