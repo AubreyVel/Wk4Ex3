@@ -28,7 +28,15 @@ namespace Wk4Ex3
         }
        public static string CountVowels(string userString)
         {
+            string vowels = "aeiou";
 
+            string[] vowel = { "a", "e", "i", "o", "u" };
+
+
+            foreach ( vowel in userString)
+            {
+
+            }
         }
        public static string IsPalindrome(string userString)
         {
