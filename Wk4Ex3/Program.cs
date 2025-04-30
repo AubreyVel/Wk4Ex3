@@ -23,7 +23,9 @@ namespace Wk4Ex3
         public static string ReverseString(string userString)
         {
             string newString = "";
+            string[] reverse = { };
 
+            foreach ()
 
 
             Console.WriteLine(newString);
@@ -33,11 +35,14 @@ namespace Wk4Ex3
         {
             string vowels = "aeiou";
 
-            string[] vowel = { "a", "e", "i", "o", "u" };
-
-
-            foreach ( vowel in userString)
+            int count = 0;
+            foreach (char c in )
             {
+                if ()
+                {
+                    count++;
+                }
+
 
             }
         }
