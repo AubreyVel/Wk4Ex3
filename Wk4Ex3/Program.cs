@@ -23,97 +23,89 @@ namespace Wk4Ex3
             {
                 case 1:
                     Console.WriteLine(userString + " reversed is: " + ReverseString(userString));
+                    Console.ReadLine();
                     break;
                 case 2:
                     Console.WriteLine("The amount of vowels in " + userString + " is: " + CountVowels(userString));
+                    Console.ReadLine();
                     break;
                 case 3:
-                    IsPalindrome(userString);
+                    Console.WriteLine(IsPalindrome(userString));
+                    Console.ReadLine();
                     break;
                 default:
                     Console.WriteLine("Good bye.");
+                    Console.ReadLine();
                     break;
             }
-
-
-            
-            
-            
 
 
         }
 
+
+
+
+
+
         public static string ReverseString(string userString)
         {
             string newString = "";
-            string[] reverse = { };
-
-            foreach(char c in userString)
+           
+            for (int i = userString.Length-1; i >=0 ; i--)
             {
-                string v = Convert.ToString(c);
-                for (int i = 0; i <= reverse.Length; i++)
-                {
-                    newString += reverse[i];
-                } 
+                newString += userString[i];
             }
-            for (int i = reverse.Length; i >= 0 ; i--)
-            {
-                newString += reverse[i];
-            }
-
-
             return newString;
         }
 
 
 
-       public static string CountVowels(string testString)
+       public static int CountVowels(string testString)
         {
-            string[] vowels = {"a","e","i","o","u"};
+            char[] vowels = {'a','e','i','o','u'};
 
             int count = 0;
+
             foreach (char c in testString)
             {
                 
                 for (int i = 0; i < vowels.Length; i++)
                 {
-                    string v = Convert.ToString(c);
-                    if (v == vowels[i])
+                    
+                    if (c == vowels[i])
                     {
                         count++;
+                        break;
                     }
-                    Console.WriteLine(v+" "+count);
+                    
                 }
 
             }
-            return testString;
+            return count;
         }
+
+
+
+
+
        public static string IsPalindrome(string userString)
         {
 
             string newString = "";
-            string[] reverse = { };
 
-            foreach (char c in userString)
+            for (int i = userString.Length - 1; i >= 0; i--)
             {
-                int i = 0;
-                reverse[i] = Convert.ToString(c);
-                i++;
-
+                newString += userString[i];
             }
-            for (int i = reverse.Length; i >= 0; i--)
-            {
-                newString += reverse[i];
-            }
-
+      
             if (userString == newString)
             {
-                return "The word: "+userString+ "IS a palindrome.";
+                return "The word: "+userString+ " IS a palindrome.";
             }
 
             else
             {
-                return "The word:"+userString+"is NOT a Palindrome";
+                return "The word: "+userString+" is NOT a Palindrome";
             }
         }
     }
